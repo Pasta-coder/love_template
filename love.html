@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To My Dearest ______ ❤️</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Playfair Display', serif;
+        }
+
+        body {
+            background-color: #df1e44;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: #c20836;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(245, 10, 10, 0.3);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: #ffd1dc;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            font-size: 1.1rem;
+        }
+
+        nav a:hover {
+            color: #fff;
+            text-shadow: 0 0 10px #ff69b4;
+        }
+
+        section {
+            min-height: 100vh;
+            padding: 6rem 2rem 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-position: center;
+            background-size: cover;
+        }
+
+        #home {
+            background: linear-gradient(rgba(26, 0, 5, 0.8), rgba(128, 0, 32, 0.8)),
+                        url('/api/placeholder/1920/1080');
+            text-align: center;
+        }
+
+        .heart {
+            font-size: 6rem;
+            color: #ff1493;
+            animation: pulse 1.5s infinite;
+            text-shadow: 0 0 20px #ff69b4;
+            margin-bottom: 2rem;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        .title {
+            font-size: 3.5rem;
+            margin: 1rem 0;
+            color: #ff1493;
+            text-shadow: 2px 2px 4px rgba(11, 10, 10, 0.5);
+            font-family: 'Playfair Display', serif;
+        }
+
+        .subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: #ffd1dc;
+            font-style: italic;
+        }
+
+        #messages {
+            background: linear-gradient(rgba(26, 0, 5, 0.9), rgba(26, 0, 5, 0.9)),
+                        url('/api/placeholder/1920/1080');
+        }
+
+        .message-container {
+            background-color: rgba(128, 0, 32, 0.3);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(255, 20, 147, 0.2);
+            max-width: 800px;
+            width: 100%;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 20, 147, 0.3);
+            margin: 2rem 0;
+        }
+
+        .love-message {
+            font-size: 1.5rem;
+            color: #ffd1dc;
+            text-align: center;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            font-style: italic;
+        }
+
+        .signature {
+            text-align: right;
+            color: #ff1493;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-top: 2rem;
+        }
+
+        #quotes {
+            background: linear-gradient(rgba(26, 0, 5, 0.9), rgba(128, 0, 32, 0.9));
+        }
+
+        .quote-container {
+            text-align: center;
+            max-width: 800px;
+            padding: 3rem;
+            background-color: rgba(128, 0, 32, 0.3);
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(255, 20, 147, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 20, 147, 0.3);
+        }
+
+        .quote {
+            font-size: 1.8rem;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: #ffd1dc;
+        }
+
+        .author {
+            color: #ff1493;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        button {
+            background-color: #ff1493;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1.1rem;
+            margin-top: 2rem;
+            box-shadow: 0 0 20px rgba(255, 20, 147, 0.3);
+        }
+
+        button:hover {
+            background-color: #ff69b4;
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(255, 20, 147, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2.5rem;
+            }
+            
+            .subtitle {
+                font-size: 1.4rem;
+            }
+
+            .love-message {
+                font-size: 1.3rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#messages">Love Notes</a></li>
+            <li><a href="#quotes">Quotes</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <div class="heart">❤️</div>
+        <h1 class="title">My Dearest ______</h1>
+        <p class="subtitle">Every moment with you is a treasure...</p>
+        <button onclick="scrollToSection('messages')">Read My Love Notes</button>
+    </section>
+
+    <section id="messages">
+        <h2 class="title">Love Notes for You</h2>
+        <div class="message-container">
+            <p class="love-message" id="current-message"></p>
+            <p class="signature">Forever Yours,<br>Jayant ❤️</p>
+        </div>
+        <button onclick="generateMessage()">Read Next Note</button>
+    </section>
+
+    <section id="quotes">
+        <h2 class="title">Words of Love</h2>
+        <div class="quote-container">
+            <p class="quote" id="current-quote"></p>
+            <p class="author" id="current-author"></p>
+            <button onclick="generateQuote()">Next Quote</button>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll function
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Love messages array
+        const messages = [
+            "______, your smile lights up my world in ways that nothing else can. Every moment spent with you feels like a beautiful dream I never want to wake up from.",
+            "My dearest ______, you're not just my valentine, you're my everything. Your love makes every day feel like Valentine's Day.",
+            "When I'm with you, ______ , time stands still. Your love has given my life a meaning I never knew existed.",
+            "______, my love for you grows stronger with each passing day. You're the first thought in my morning and the last thought before I sleep.",
+            "To my beloved ______, you're the missing piece of my heart that I never knew I was searching for. Thank you for completing me."
+        ];
+
+        // Message generator function
+        function generateMessage() {
+            const currentMessage = document.getElementById('current-message').textContent;
+            let newMessage;
+            do {
+                newMessage = messages[Math.floor(Math.random() * messages.length)];
+            } while (newMessage === currentMessage);
+            
+            document.getElementById('current-message').textContent = newMessage;
+        }
+
+        // Love quotes array
+        const quotes = [
+            { text: "In your eyes, I have found my home. In your heart, I have found my love.", author: "Jayant to ______" },
+            { text: "Every love story is beautiful, but ours is my favorite.", author: "Jayant to ______" },
+            { text: "You're not just my love, you're my lucky star, my sweet dream, my everything.", author: "Jayant to ______" },
+            { text: "With you, forever doesn't seem long enough.", author: "Jayant to ______" },
+            { text: "You're the reason I believe in love .", author: "Jayant to ______" }
+        ];
+
+        // Quote generator function
+        function generateQuote() {
+            const currentQuote = document.getElementById('current-quote').textContent;
+            let newQuote;
+            do {
+                newQuote = quotes[Math.floor(Math.random() * quotes.length)];
+            } while (`"${newQuote.text}"` === currentQuote);
+            
+            document.getElementById('current-quote').textContent = `"${newQuote.text}"`;
+            document.getElementById('current-author').textContent = `- ${newQuote.author}`;
+        }
+
+        // Generate initial message and quote
+        generateMessage();
+        generateQuote();
+
+        // Add smooth scrolling to all nav links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const sectionId = this.getAttribute('href').substring(1);
+                scrollToSection(sectionId);
+            });
+        });
+    </script>
+</body>
+</html>
